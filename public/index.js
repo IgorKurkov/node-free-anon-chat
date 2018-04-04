@@ -29,6 +29,8 @@ const get = (url, formData) => {
 };
 
 //UTILS
+const focus = (el) => (screen.width > 700) && el.focus();
+const blur = (el) => (screen.width < 700) && el.blur();
 const formatDate = (sent, splitter) => {
   sent = new Date(sent);
   let dateSentFormatted =
@@ -72,14 +74,11 @@ const drawMessages = (data) => {
   });
   postsContainer.innerHTML = html;
   scrollDown();
-  focus();
+  focus(username);
+  blur(text);
 }
 
-const focus = () => {
-  if(screen.width > 700) {
-    username.focus();
-  }
-}
+
 const reDrawMessages = () => {
   get('/posts').then(drawMessages);
 }
@@ -120,6 +119,7 @@ form.addEventListener("keyup", ev => {
       get('/posts', {username: username, text: text})
       .then(() => reDrawMessages())
       form.reset();
+      
       counterReset();
     }
   }
@@ -130,7 +130,7 @@ form.addEventListener("keyup", ev => {
 var elem = document.querySelector('.sidenav');
 var instance = M.Sidenav.init(elem, {draggable: true});
 reDrawMessages();
-focus();
+focus(username);
 window.onload = () => {
   scrollDown();
 }
