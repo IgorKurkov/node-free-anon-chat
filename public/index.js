@@ -134,6 +134,6 @@ window.onload = () => {
 //normal date view OK
 //scroll down in load winwdow OK
 //popup or toast OK
-//counter string length of 'text' input
-//disallow autocomplete
-//form background make white
+//counter string length of 'text' and 'username' inputs OK
+//disallow autocomplete OK
+//form background make white OK
