@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=`, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Node chat</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">ANONSCHAT :)</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="/">Chat</a></li>
+              <li><a href="https://github.com/IgorKurkov">About me</a></li>
+          </ul>
+        </div>
+      </nav>
+      <ul id="slide-out" class="sidenav">
+          <li><div class="user-view">
+            <div class="background">
+              <img src="http://materializecss.com/images/office.jpg">
+            </div>
+            <a href="#user"><img class="circle" src="https://avatars1.githubusercontent.com/u/29090227?s=460&v=4"></a>
+            <a href="#name"><span class="white-text name">Igor Kurkov</span></a>
+            <a href="#email"><span class="white-text email">kurkov87@gmail.com</span></a>
+          </div></li>
+          <li><a class="waves-effect" target="_blank" href="https://github.com/IgorKurkov"><i class="material-icons">launch</i>Github</a></li>
+          <li><a class="waves-effect" target="_blank" href="https://www.linkedin.com/in/igor-kurkov-634760132/"><i class="material-icons">launch</i>Linkedin</a></li>
+          <li><div class="divider"></div></li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons sidenav-icon">menu</i></a>
+              
+  <main id="main">
+    <div class="wrapper">
+    <div id="posts-container"> 
+
+    </div>
+  </div>
+    <form id="create-post" class="col s12">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="username" name="username" type="text" class="validate">
+                <label for="username">Enter your username</label>
+                <span id="username-char-counter">0</span>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mode_edit</i>
+                <input id="text" name="text" type="text" class="validate">
+                <label for="text">Write here your chat message</label>
+                <span id="text-char-counter">0</span>
+              </div>
+              
+        </div>
+    </form>
+  </main>
+  <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+        © 2018 Write with love) by Igor Kurkov
+        <a class="grey-text text-lighten-4 right" href="https://www.linkedin.com/in/igor-kurkov-634760132/">My Linkedin</a>
+        </div>
+      </div>
+    </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
