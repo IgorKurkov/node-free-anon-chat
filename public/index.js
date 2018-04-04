@@ -119,7 +119,7 @@ form.addEventListener("keyup", ev => {
       get('/posts', {username: username, text: text})
       .then(() => reDrawMessages())
       form.reset();
-      blur(text);
+      // blur(text);
       counterReset();
     }
   }
