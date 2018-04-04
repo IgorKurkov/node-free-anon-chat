@@ -72,12 +72,18 @@ const drawMessages = (data) => {
   });
   postsContainer.innerHTML = html;
   scrollDown();
-  username.focus();
+  focus();
 }
 
+const focus = () => {
+  if(screen.width > 700) {
+    username.focus();
+  }
+}
 const reDrawMessages = () => {
   get('/posts').then(drawMessages);
 }
+
 const scrollDown = () => {
   postsContainer.scrollTop = postsContainer.scrollHeight - postsContainer.clientHeight;
 }
@@ -124,7 +130,7 @@ form.addEventListener("keyup", ev => {
 var elem = document.querySelector('.sidenav');
 var instance = M.Sidenav.init(elem, {draggable: true});
 reDrawMessages();
-username.focus();
+focus();
 window.onload = () => {
   scrollDown();
 }
