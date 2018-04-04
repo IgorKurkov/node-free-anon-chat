@@ -75,7 +75,7 @@ const drawMessages = (data) => {
   postsContainer.innerHTML = html;
   scrollDown();
   focus(username);
-  // blur(text);
+  blur(text);
 }
 
 
