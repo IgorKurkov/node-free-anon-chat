@@ -135,3 +135,5 @@ window.onload = () => {
 //scroll down in load winwdow OK
 //popup or toast OK
 //counter string length of 'text' input
+//disallow autocomplete
+//form background make white
