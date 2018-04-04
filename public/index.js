@@ -75,7 +75,7 @@ const drawMessages = (data) => {
   postsContainer.innerHTML = html;
   scrollDown();
   focus(username);
-  blur(text);
+  // blur(text);
 }
 
 
@@ -119,7 +119,7 @@ form.addEventListener("keyup", ev => {
       get('/posts', {username: username, text: text})
       .then(() => reDrawMessages())
       form.reset();
-      
+      blur(text);
       counterReset();
     }
   }
